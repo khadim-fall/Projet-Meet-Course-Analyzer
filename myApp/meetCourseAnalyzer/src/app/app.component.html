@@ -1,0 +1,19 @@
+
+  <ng-sidebar-container>
+    <ng-sidebar [opened]="opened">
+      <p>VEUILLEZ CHOISIR UN MODULE:</p>
+      <button (click)="ouvrirBarre()">QUITTER</button>
+      <ul class="menu">
+        <li><a routerLink="/accueil" (click)="ouvrirBarre()">ACCUEIL</a></li>
+        <li><a routerLink="/module1" (click)="ouvrirBarre()">MODULE 1</a></li>
+        <li><a routerLink="/module2" (click)="ouvrirBarre()">MODULE 2</a></li>
+        <li><a routerLink="/module3" (click)="ouvrirBarre()">MODULE 3</a></li>
+      </ul>
+    </ng-sidebar>
+    <div ng-sidebar-content>
+      <button (click)="ouvrirBarre()">VOIR LES MODULES</button>
+      <router-outlet></router-outlet>
+    </div>
+  </ng-sidebar-container>
+
+
